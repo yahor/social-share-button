@@ -1,3 +1,15 @@
+== 0.2.1
+
+* Allow for override of allowed sites in helper.
+
+== 0.2.0
+
+* Added social share with LinkedIn feature.
+
+== 0.1.10
+
+* Add `email` share
+
 == 0.1.9
 
 * Add `data-via` to allow `{ via: "MyTwitter" }`

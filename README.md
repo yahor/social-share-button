@@ -2,6 +2,8 @@
 
 This is a gem to helper you quick create a share feature in you Rails apps.
 
+[![Gem Version](https://badge.fury.io/rb/social-share-button.svg)](https://badge.fury.io/rb/social-share-button)
+
 # Sites list
 
 * Facebook
@@ -20,6 +22,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Plurk
 * Pinterest
 * Email
+* LinkedIn
 
 ## Screenshot
 
@@ -42,11 +45,11 @@ $ rails generate social_share_button:install
 
 ## Configure
 
-You can config `config/initializes/social_share_button.rb` to choose which site do you want to use:
+You can config `config/initializers/social_share_button.rb` to choose which site do you want to use:
 
 ```ruby
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu tumblr plurk pinterest email)
+  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu google_bookmark delicious tumblr plurk pinterest email linkedin)
 end
 ```
 
@@ -64,6 +67,14 @@ You need add require css,js file in your app assets files:
 
 ```
 *= require social-share-button
+```
+
+In Rails 4.1.6 , use `@import` to require files:
+
+`app/assets/stylesheets/application.css.scss`
+
+```
+@import "social-share-button";
 ```
 
 Then you can use `social_share_button_tag` helper in views, for example `app/views/posts/show.html.erb`
